@@ -96,7 +96,7 @@ public class Main
         // 4. Minimum und Maximum finden
         printMessage("4. Minimum und Maximum finden\n");
 
-        int[] minMaxZahlen = {206,899,7,66,22,11,88,179,21,1001,};
+        int[] minMaxZahlen = {206,899,7,66,22,11,88,179,21,1001};
 
         int min = minMaxZahlen[0];
         int max = minMaxZahlen[0];
@@ -210,18 +210,16 @@ public class Main
         printMessage("\nDein Durschnitt: " + deinDurschnitt);
 
         printMessage("\nAb welchem Durchschnitt hat man bestanden? ");
-        int durchschnit = scanner.nextInt();
+        int durchschnitt = scanner.nextInt();
 
         String bestanden = "\nDu hast bestanden!";
-        boolean bBestanden = deinDurschnitt >= durchschnit;
+        boolean bBestanden = deinDurschnitt >= durchschnitt;
         if (!bBestanden)
         {
             bestanden = "Du hast nicht bestanden!";
         }
 
         printMessage(bestanden);
-
-
     }
 
     public static void printMessage(String message)
