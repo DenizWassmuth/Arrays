@@ -3,7 +3,11 @@ import java.util.Scanner;
 public class Main
 {
     static void main() {
+
         printMessage("\nLEVEL 1 - EASY\n");
+
+        // 1. Einfache Zahlenfolge ausgeben
+        printMessage("1. Einfache Zahlenfolge ausgeben\n");
 
         int[] zahlen = new int[5];
         zahlen[0] = 1;
@@ -17,7 +21,11 @@ public class Main
             printMessage("index " + i + " = " + zahlen[i]);
         }
 
-        printMessage("\n\n");
+        printMessage("\n");
+
+
+        // 2. Alle Elemente eines Arrays anzeigen
+        printMessage("2. Alle Elemente eines Arrays anzeigen\n");
 
         String[] namen = {"Max", "Ben", "Flo", "Ila", "Lia"};
         for (String s : namen)
@@ -25,12 +33,17 @@ public class Main
             printMessage(s);
         }
 
-        printMessage("\n\n");
+        printMessage("\n");
+
+
+        // 3.Quadratzahlen berechnen
+        printMessage("3.Quadratzahlen berechnen\n");
+
         int[] quadratZahlen = {2,4,6,8};
 
         for (int i : quadratZahlen)
         {
-            printMessage("Die Quadratzahl von " + i + " ist " + i + i + "\n");
+            printMessage("Die Quadratzahl von " + i + " ist " + i * i + "\n");
         }
 
         printMessage("\n\n");
