@@ -153,7 +153,7 @@ public class Main
         for (int i = 0; i < vornamen.length; i++)
         {
             String nachname = "None";
-            boolean bHasNoName = nachnamen.length - i <= 0;
+            boolean bHasNoName = nachnamen.length - (i + 1) < 0;
             if (!bHasNoName)
             {
                 nachname = nachnamen[i];
@@ -162,12 +162,71 @@ public class Main
             String vorUndNachname = vornamen[i] + " " + nachname;
             printMessage(vorUndNachname);
         }
+
+
+        printMessage("\n\n");
+
+        // 3. Benutzereingabe verarbeiten
+        printMessage("3. Benutzereingabe verarbeiten\n");
+
+        Scanner scanner = new Scanner(System.in);
+
+        int[] eingabe = new int[5];
+
+        for (int i = 0; i < eingabe.length; i++)
+        {
+            printMessage("Bitte geben sie eine Zahl ein!");
+            eingabe[i] = scanner.nextInt();
+        }
+
+        printMessage("\n");
+
+        for (int i: eingabe)
+        {
+            printMessage(String.valueOf(i));
+        }
+
+        printMessage("\n\n");
+
+        // 4. einfacher Notenrechner
+        printMessage("4. einfacher Notenrechner\n");
+
+        int[] noten = {80,90,60,50,100};
+
+        printMessage("Deine bisherigen Noten: ");
+        for (int i = 0; i < noten.length; i++)
+        {
+            printMessage(String.valueOf(noten[i]));
+        }
+
+        printMessage("\nAb welchem Durchschnitt hat man bestanden? ");
+        int durchschnit = scanner.nextInt();
+
+        int summe = 0;
+        for (int i : noten)
+        {
+            summe += i;
+        }
+
+        String bestanden = "Du hast bestanden!";
+        boolean bBestanden = summe / noten.length >= durchschnit;
+        if (!bBestanden)
+        {
+            bestanden = "Du hast nicht bestanden!";
+        }
+
+        printMessage(bestanden);
+
+
     }
 
     public static void printMessage(String message)
     {
         System.out.println(message);
     }
+
+
+
 }
 
 
