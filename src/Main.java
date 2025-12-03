@@ -26,14 +26,14 @@ public class Main
         }
 
         printMessage("\n\n");
-
         int[] quadratZahlen = {2,4,6,8};
 
-        for (int i = 0; i < quadratZahlen.length; i++)
+        for (int i : quadratZahlen)
         {
-            printMessage("Die Quadratzahl von " + quadratZahlen[i] + " ist " + quadratZahlen[i] + quadratZahlen[i] + "\n");
+            printMessage("Die Quadratzahl von " + i + " ist " + i + i + "\n");
         }
 
+        printMessage("\n\n");
     }
 
     public static void printMessage(String message)
