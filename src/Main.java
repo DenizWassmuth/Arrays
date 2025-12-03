@@ -199,17 +199,21 @@ public class Main
             printMessage(String.valueOf(noten[i]));
         }
 
+        int notenSumme = 0;
+        for (int i : noten)
+        {
+            notenSumme += i;
+        }
+
+        printMessage("\nNotensumme: " + notenSumme);
+        int deinDurschnitt = notenSumme / noten.length;
+        printMessage("\nDein Durschnitt: " + deinDurschnitt);
+
         printMessage("\nAb welchem Durchschnitt hat man bestanden? ");
         int durchschnit = scanner.nextInt();
 
-        int summe = 0;
-        for (int i : noten)
-        {
-            summe += i;
-        }
-
-        String bestanden = "Du hast bestanden!";
-        boolean bBestanden = summe / noten.length >= durchschnit;
+        String bestanden = "\nDu hast bestanden!";
+        boolean bBestanden = notenSumme / noten.length >= durchschnit;
         if (!bBestanden)
         {
             bestanden = "Du hast nicht bestanden!";
