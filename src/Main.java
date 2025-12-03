@@ -213,7 +213,7 @@ public class Main
         int durchschnit = scanner.nextInt();
 
         String bestanden = "\nDu hast bestanden!";
-        boolean bBestanden = notenSumme / noten.length >= durchschnit;
+        boolean bBestanden = deinDurschnitt >= durchschnit;
         if (!bBestanden)
         {
             bestanden = "Du hast nicht bestanden!";
