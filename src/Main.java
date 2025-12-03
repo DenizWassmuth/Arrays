@@ -140,15 +140,28 @@ public class Main
             doppelWerte[i] = doppelWert;
 
             printMessage("neuer Wert auf index " + i + " = " + doppelWerte[i] + "\n");
-
-
-            printMessage("\n\n");
-
-
-            // 2. Arrays kombinieren
-            printMessage("2. Arrays kombinieren\n");
         }
 
+
+        printMessage("\n\n");
+
+        // 2. Arrays kombinieren
+        printMessage("2. Arrays kombinieren\n");
+
+        String[] vornamen = {"Max", "Frida", "Loki", "Paul", "Anna"};
+        String[] nachnamen = {"Schmidt", "Lore", "Nordmann", "Fitze", "Siebert"};
+        for (int i = 0; i < vornamen.length; i++)
+        {
+            String nachname = "None";
+            boolean bHasNoName = nachnamen.length - i <= 0;
+            if (!bHasNoName)
+            {
+                nachname = nachnamen[i];
+            }
+
+            String vorUndNachname = vornamen[i] + " " + nachname;
+            printMessage(vorUndNachname);
+        }
     }
 
     public static void printMessage(String message)
