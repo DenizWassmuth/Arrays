@@ -92,6 +92,33 @@ public class Main
 
         printMessage("\n\n");
 
+
+        // 4. Minimum und Maximum finden
+        printMessage("4. Minimum und Maximum finden\n");
+
+        int[] minMaxZahlen = {206,899,7,66,22,11,88,179,21,1001,};
+
+        int min = minMaxZahlen[0];
+        int max = minMaxZahlen[0];
+
+        for (int i : minMaxZahlen)
+        {
+            if (i < min)
+            {
+                min = i;
+            }
+
+            if (i > max)
+            {
+                max = i;
+            }
+
+            printMessage(String.valueOf(i));
+        }
+
+        printMessage("min = " + min);
+        printMessage("max = " + max);
+
     }
 
     public static void printMessage(String message)
