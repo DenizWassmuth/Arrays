@@ -78,6 +78,20 @@ public class Main
             printMessage("Die Summe aus " + zwischenSumme + " und " + i + " ist " + summe);
         }
 
+        printMessage("\n\n");
+
+
+        // 3. Index mit ausgeben
+        printMessage("3. Index mit ausgeben\n");
+
+        String[] staedteNamen = {"Berlin", "Hamburg", "Wuppertal", "München", "Köln"};
+        for (int i = 0; i < staedteNamen.length; i++)
+        {
+            printMessage("index " + i + " = " + staedteNamen[i]);
+        }
+
+        printMessage("\n\n");
+
     }
 
     public static void printMessage(String message)
