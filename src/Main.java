@@ -61,6 +61,23 @@ public class Main
                 printMessage(String.valueOf(i));
             }
         }
+
+        printMessage("\n\n");
+
+
+        // 2. Summe berechnen
+        printMessage("2. Summe berechnen\n");
+
+        int[] beliebigeZahlen = {3,6,7,8,22,56,88,179,21,55,};
+
+        int summe = 0;
+        for (int i : beliebigeZahlen)
+        {
+            int zwischenSumme = summe;
+            summe += i;
+            printMessage("Die Summe aus " + zwischenSumme + " und " + i + " ist " + summe);
+        }
+
     }
 
     public static void printMessage(String message)
