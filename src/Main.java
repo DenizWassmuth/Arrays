@@ -43,10 +43,24 @@ public class Main
 
         for (int i : quadratZahlen)
         {
-            printMessage("Die Quadratzahl von " + i + " ist " + i * i + "\n");
+            printMessage("Die Quadratzahl von " + i + " ist " + i * i);
         }
 
         printMessage("\n\n");
+
+        printMessage("\nLEVEL 2 - MEDIUM\n");
+
+        //1. Nur gerade Zahlen ausgeben
+        printMessage("1. Nur gerade Zahlen ausgebn\n");
+
+        int[] nurGeradeZahlen = {1,2,3,4,5,6,7,8,9,10};
+        for (int i : nurGeradeZahlen)
+        {
+            if (i % 2 == 0)
+            {
+                printMessage(String.valueOf(i));
+            }
+        }
     }
 
     public static void printMessage(String message)
