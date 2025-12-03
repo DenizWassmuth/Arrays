@@ -116,8 +116,38 @@ public class Main
             printMessage(String.valueOf(i));
         }
 
+        printMessage("");
+
         printMessage("min = " + min);
         printMessage("max = " + max);
+
+
+        printMessage("\n\n");
+
+        printMessage("\nLEVEL 3 - Bonus\n");
+
+        // 1. Array-Werte verdoppeln
+        printMessage("1. Array-Werte verdoppeln\n");
+
+        int[] doppelWerte = {1,2,3,4,5,6,7,8,9,10};
+        for (int i = 0; i < doppelWerte.length; i++)
+        {
+            printMessage("alter Wert auf index " + i + " = " + doppelWerte[i]);
+
+            int doppelWert =  doppelWerte[i] * 2;
+            printMessage(doppelWerte[i] + " verdoppelt = " + doppelWert);
+
+            doppelWerte[i] = doppelWert;
+
+            printMessage("neuer Wert auf index " + i + " = " + doppelWerte[i] + "\n");
+
+
+            printMessage("\n\n");
+
+
+            // 2. Arrays kombinieren
+            printMessage("2. Arrays kombinieren\n");
+        }
 
     }
 
